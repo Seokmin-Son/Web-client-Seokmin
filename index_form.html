@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+    <link rel="stylesheet" href="style_form.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>Registration Form</header>
+    <form action="index.html" target="_blank">
+    <!--action is an attribute
+    defimes the action to be done when we press the submit button.
+    Usually, the form data sents package of data to the server and if 
+    all the data is good we the sucess message.-->   
+<fieldset>
+    <legend>Webinar Registration</legend>
+    <label for="Frist name">Frist name</label>
+    <input type="text" id="Frist name"><br><br>
+    <label for="Last name">Last name</label>
+    <input type="text" id="Last name"><br><br>
+    <label for="job"Select your job></label>
+    <input type="checkbox" id="Student" name="Student">
+    <label for="Student">Student</label>
+    <input type="checkbox" id="Teacher" name="Teacher">
+    <label for="Teacher">Teacher</label>
+    <input type="checkbox" id="Admin" name="Admin">
+    <label for="Admin">Administration</label><br><br>
+    <label for="time">Choose your time: &nbsp;&nbsp;</label>
+    <select name="time" id="time">
+        <option value="Morning">Morning</option>
+        <option value="Afternoon">Afternoon</option>
+        <option value="Evening">Evening</option>
+    </select><br><br>
+    <label for="comment">comment</label>
+    <textarea name="message" id="message">Put your message here</textarea>
+</fieldset> <br><br>
+<!--button has many attribute-->
+<button type="button" onclick="alert('Thank you! Your information is submitted.')">submit</button>
+
+</form>
+
+</body> 
+</html>
