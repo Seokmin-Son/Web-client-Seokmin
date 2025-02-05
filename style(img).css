@@ -1,0 +1,7 @@
+.zoom{
+    width: auto;
+    margin: auto;
+}
+.zoom:hover{
+    transform: scale(1.5);
+}
