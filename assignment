@@ -5,3 +5,4 @@ function Myself() {
 
             console.log("Name: " + name + ", Age: " +age + ", Hobby: " + hobby)
         }
+Myself () ;
