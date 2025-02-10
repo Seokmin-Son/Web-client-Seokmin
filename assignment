@@ -1,0 +1,7 @@
+function Myself() {
+            let name = "Seokmin"
+            let age = 22
+            let hobby = "game"
+
+            console.log("Name: " + name + ", Age: " +age + ", Hobby: " + hobby)
+        }
