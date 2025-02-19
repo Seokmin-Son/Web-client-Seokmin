@@ -1,0 +1,108 @@
+/*
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="scripst.js"></script>
+</head>
+<body>
+    <h1>Library</h1>
+    <script>
+        class Book {
+            constructor(title, author, yearPublished, isAvailable){
+            this.title = title
+            this.author = author
+            this.yearPublished = yearPublished
+            this.isAvailable = isAvailable
+        }
+
+        
+        Display(){
+                console.log("Title:" + this.title +
+                            ", Author:" + this.author +
+                            ", Yearpublished:" + this.yearPublished +
+                            ", Available: " + this.isAvailable
+                )
+            }
+        }
+
+        class Library {
+            constructor() {
+                this.books = [];
+            }
+
+            addbook(Book){
+                this.books.push(Book);
+            }
+
+            removebook(title){
+                this.books = this.books.filter(Book => Book.title !== title);
+            }
+
+            findavailablebook(){
+                return this.books.filter(Book => Book.isAvailable);
+            }
+
+            Allbooks(){
+                return this.books.map(Book => Book.title);
+            }
+
+            Displayallbooks(){
+                console.log("\n All book")
+                this.books.forEach(Book =>Book.Display());
+            }
+
+            GetAvailableBooks(){
+                console.log("\n Availble to borrow")
+                return this.books.filter(books => books.isAvailable);
+            }      
+
+            Borrowbook(title){
+                if (this.isAvailable = true) {
+                    this.isAvailable = false
+                    console.log(title + " is succesfully borrowed.");
+                }
+                else{
+                    console.log(title + " is already borrowed.");
+                }
+            }
+
+            Returnbook(title){
+                if (this.isAvailable == false){
+                    this.isAvailable = true
+                    console.log(title + " is succesfully returned.");
+                }
+                else{
+                    console.log(title + " was not borrowed.");
+                }
+            }
+
+            showtitle(){
+                console.log(this.title)
+            }
+        }
+
+        const book1 = new Book("Importants of breakfast","Seokmin", 2025, true);
+        const book2 = new Book("Basic of web design", "Pencake", 2002, true);
+        const book3 = new Book("How to earn money", "Penny", 1999, true);
+
+        const library = new Library();
+        library.addbook(book1);
+        library.addbook(book2);
+        library.addbook(book3);
+
+        library.Borrowbook(book1.title);
+
+        library.Returnbook(book1.title);
+
+        console.log(library.GetAvailableBooks());
+
+        library.Displayallbooks();
+
+        library.removebook(book2.title);
+        library.Displayallbooks();
+    </script>
+</body>
+</html> 
